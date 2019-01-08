@@ -9,7 +9,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,4 +29,45 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.caloutlet{
+  box-shadow: 2px 2px 26px lightgrey;
+  padding:20px;
+  border-radius: 10px;
+  width:400px;
+  height:580px;
+  overflow: hidden;
+  position: relative;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.inputclass{
+  padding:30px;
+  width:300px;
+  /* border-radius: 15px; */
+}
+
+.layout{
+  /* border-style: solid; */
+  /* border-color: aqua; */
+  vertical-align: top;
+  box-sizing: border-box;
+  margin-top:7px;
+}
+.row{
+
+  /* border-style: solid; */
+  /* border-color:red; */
+}
+
+.buttonclass{
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  padding:35px;
+  border: solid 1px black;
+  margin:2px;
+  cursor: pointer;
 }
