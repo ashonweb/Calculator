@@ -36,7 +36,7 @@
   padding:20px;
   border-radius: 10px;
   width:400px;
-  height:580px;
+  height:600px;
   overflow: hidden;
   position: relative;
   margin: 20px auto;
@@ -65,9 +65,16 @@
 .buttonclass{
   display: inline-block;
   vertical-align: top;
-  box-sizing: border-box;
-  padding:35px;
+  box-sizing: border-box;  
   border: solid 1px black;
   margin:2px;
   cursor: pointer;
+  height: 100px;
+  width: 88px;  
+}
+
+.item {
+  height: 100px;
+  display: inline-block;
+  line-height: 100px;
 }

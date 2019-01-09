@@ -7,24 +7,69 @@ class Caloutlet extends Component {
     super(props)
     this.state = {
       val :'',
+      valArray:[],
+      answerArray:[],
     }
   }
   onChange = (inputVal) =>{
-   this.setState({
-      val : inputVal,
+    let value = this.state.val;
+    this.setState({
+      val : value += inputVal,
+    }, () => {
+      let valueInput = this.state.val;
+      console.log(valueInput);
+      let valueArray = this.state.valArray.slice();
+      valueArray.push(inputVal);
+      console.log(valueArray);
+      this.setState({
+        valArray: valueArray
+      })
     })
-    console.log(inputVal);
   }
+  
+  backevent = (valArray) => {
+    let backArray = this.state.valArray.slice();
+    //let answerbackArray = this.state.answerArray.slice();
+    if(backArray !== [])
+    {
+     let i = backArray.slice(0,backArray.length-1);
+     console.log(i);
+
+      this.setState({
+        val: i.join(''),
+        valArray:i,        
+      })
+    }
+    else{      
+      this.setState({
+        val: '',
+      })
+    }
+  }
+
+  evaluate = (val) => {    
+    this.setState({
+      valArray: [],
+    })
+    const answer = eval(this.state.val);    
+    this.setState({
+      val: answer,       
+    })
+  }
+
   onClear = () =>{
     let inputv = this.state.val;
+  
     if(inputv === ''){
     alert("nothing to clear");
     return ;
     }
     else
-    inputv = 0;
+    inputv = "";
     this.setState({
-      val:inputv
+      val:inputv,
+      valArray:[],
+      answerArray:[],
     })
 
   }
@@ -38,7 +83,10 @@ class Caloutlet extends Component {
           />
         </div>
         <div>
-          <Callayout onChange={this.onChange} onClear={this.onClear} />
+          <Callayout onChange={this.onChange} 
+          onClear={this.onClear} 
+          backevent = {this.backevent}
+          evaluate = {this.evaluate}/>
         </div>
       </div>
     )
