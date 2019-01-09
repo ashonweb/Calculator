@@ -71,8 +71,11 @@
   cursor: pointer;
   height: 100px;
   width: 88px;  
+  background-color: #ddd;
+  opacity: 0.6;
+  transition: 0.3s;
 }
-
+.buttonclass:hover{opacity: 1;}
 .item {
   height: 100px;
   display: inline-block;

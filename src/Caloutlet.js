@@ -8,7 +8,6 @@ class Caloutlet extends Component {
     this.state = {
       val :'',
       valArray:[],
-      answerArray:[],
     }
   }
   onChange = (inputVal) =>{
@@ -29,7 +28,6 @@ class Caloutlet extends Component {
   
   backevent = (valArray) => {
     let backArray = this.state.valArray.slice();
-    //let answerbackArray = this.state.answerArray.slice();
     if(backArray !== [])
     {
      let i = backArray.slice(0,backArray.length-1);
