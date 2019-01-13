@@ -5,7 +5,7 @@ class Calinput extends Component {
   render(){
     return(
       <div>
-        <input className="inputclass" type="text" value={this.props.val} onChange={this.props.onChange} required />
+        <input className="inputclass" type="text" value={this.props.val} onChange={this.props.onChange} disabled={true} required />
         {/* <div>
           {
             this.props.valArr.map((v, i) => <span key={i}>{v}</span>)
