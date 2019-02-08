@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Caloutlet from './Caloutlet';
 import './App.css';
+import './responsive.css';
 
 class App extends Component {
   render() {

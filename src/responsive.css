@@ -1,0 +1,38 @@
+@media only screen and (max-width: 600px) {
+  
+  .inputclass{
+    padding:16px;
+    width:auto;
+
+margin-top:10px    /* border-radius: 15px; */
+  }
+
+  .caloutlet {
+    box-shadow: 2px 2px 26px lightgrey;
+    padding: 0px;
+    border-radius: 10px;
+    width: auto;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    margin: 0px auto;
+    text-align: center;
+}
+  .buttonclass{
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;  
+    border: solid 1px black;
+    margin:2px;
+    cursor: pointer;
+    height: 80px;
+    width: 70px;  
+    background-color: #ddd;
+    opacity: 0.6;
+    transition: 0.3s;
+  }
+  .item {
+    
+    line-height: 80px;
+  }
+}
